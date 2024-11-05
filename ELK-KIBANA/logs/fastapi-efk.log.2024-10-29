@@ -1,0 +1,12 @@
+2024-10-29 11:20:45,722 - main - INFO - ---- startup APP -----
+2024-10-29 11:39:07,554 - controllers.home - INFO - Welcome Loggerstash Application
+2024-10-29 11:39:18,165 - controllers.home - INFO - Welcome page test
+2024-10-29 22:52:52,099 - main - INFO - ----- shutdown APP -----
+2024-10-29 22:52:52,524 - main - INFO - ---- startup APP -----
+2024-10-29 22:56:12,422 - main - INFO - ----- shutdown APP -----
+2024-10-29 22:56:12,768 - main - INFO - ---- startup APP -----
+2024-10-29 22:56:16,812 - main - INFO - ----- shutdown APP -----
+2024-10-29 22:56:17,121 - main - INFO - ---- startup APP -----
+2024-10-29 23:00:35,742 - controllers.home - INFO - Welcome Loggerstash Application
+2024-10-29 23:00:43,930 - controllers.home - INFO - Welcome page test
+2024-10-29 23:15:50,261 - main - INFO - ----- shutdown APP -----

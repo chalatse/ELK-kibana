@@ -1,0 +1,49 @@
+# ============================== Filebeat Inputs ===============================
+
+filebeat.inputs:
+  - type: log
+    enabled: true
+    # Paths to log files
+    paths:
+      - /ELK-KIBANA/logs  
+    # Ignore older files if needed
+    ignore_older: 48h
+
+# ============================== Elasticsearch Output =========================
+
+output.elasticsearch:
+  # List of Elasticsearch hosts to connect to
+  hosts: ["http://elasticsearch:9200"]
+
+  # Optional authentication settings
+  # username: "your_elasticsearch_username"
+  # password: "your_elasticsearch_password"
+
+# ============================== Logging Configuration =========================
+
+logging.level: info
+logging.to_files: true
+logging.files:
+  path: /ELK-KIBANA/logs  # Update this path
+  name: filebeat
+  keepfiles: 7
+  permissions: 0644
+
+# ============================== Setup Index and Dashboards ====================
+
+setup.kibana:
+  # Kibana URL for loading dashboards
+  host: "http://kibana:5601"  # Update if Kibana is in a Docker service
+
+setup.ilm.enabled: auto
+setup.template.settings:
+  index.number_of_shards: 1
+  index.number_of_replicas: 1
+
+# ============================== Processors ====================================
+
+processors:
+  - add_host_metadata: ~
+  - add_cloud_metadata: ~
+  - add_docker_metadata: ~
+  - add_kubernetes_metadata: ~

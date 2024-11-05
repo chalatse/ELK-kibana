@@ -1,21 +1,24 @@
 from fastapi import APIRouter
 import logging
 
-# Get logger for module
+
+# Get logger module
 LOGGER = logging.getLogger(__name__)
 
 router = APIRouter(
-    prefix="/home",
+    prefix='/home',
     tags=['home']
 )
 
-@router.get("")
+@router.get('')
 async def welcome_home():
-    LOGGER.info("Hult Application")
-    return "Welcome Hult Application"
+    LOGGER.info("Welcome Loggerstash Application")
+    return "Welcome to LStash Application"
+
 
 @router.get("/test")
 async def test_home():
-    LOGGER.info("Welcome page test!")
-    return "Welcome to test page"
+    LOGGER.info("Welcome page test")
+    return "Welcome page test!!"
+
 
